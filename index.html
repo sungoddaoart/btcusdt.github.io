@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="zh">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>加密货币操盘策略生成器</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+
+    <!-- 网站名称 -->
+    <div id="site-title">
+        <h1>加密货币操盘策略生成器</h1>
+    </div>
+
+    <!-- 头部 -->
+    <div id="header">
+        <div>
+            <label for="token">代币代码 (例如: BTCUSDT)</label>
+            <input id="token" type="text" placeholder="代币代码" value="BTCUSDT" title="请输入正确的代币代码" />
+        </div>
+        <div>
+            <label for="investment">总投资 (USDT)</label>
+            <input id="investment" type="number" placeholder="总投资(USDT)" value="20000" title="请输入投资金额" />
+        </div>
+        <div>
+            <label for="profitTarget">盈利目标 (USDT)</label>
+            <input id="profitTarget" type="number" placeholder="盈利目标(USDT)" value="200" title="请输入盈利目标" />
+        </div>
+        <button id="queryBtn">查询并更新策略</button>
+    </div>
+
+
+    <!-- 显示实时价格 -->
+    <div id="tokenPrice" class="centered">实时价格：BTCUSDT: 0</div>
+
+    <!-- 主体内容，左右两栏布局 -->
+    <div class="main-content">
+        <!-- 左侧栏 下降通道策略 -->
+        <div id="desc-strategy" class="sidebar">
+            <h3>下降通道策略</h3>
+            <table class="strategy-table">
+                <thead>
+                    <tr>
+                        <th>次数</th>
+                        <th>买入价格</th>
+                        <th>卖出价格</th>
+                        <th>买入代币总量</th>
+                        <th>卖出总额</th>
+                        <th>盈利利润</th>
+                    </tr>
+                </thead>
+                <tbody>
+                </tbody>
+            </table>
+        </div>
+
+        <!-- 右侧栏 上升通道策略 -->
+        <div id="asc-strategy" class="sidebar">
+            <h3>上升通道策略</h3>
+            <table class="strategy-table">
+                <thead>
+                    <tr>
+                        <th>次数</th>
+                        <th>买入价格</th>
+                        <th>卖出价格</th>
+                        <th>买入代币总量</th>
+                        <th>卖出总额</th>
+                        <th>盈利利润</th>
+                    </tr>
+                </thead>
+                <tbody>
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    <!-- 底部 -->
+    <div id="footer">
+        <p>&copy; 2024 加密货币操盘策略生成器</p>
+    </div>
+
+    <!-- 引入 JavaScript -->
+    <script src="scripts.js"></script>
+
+</body>
+
+</html>
